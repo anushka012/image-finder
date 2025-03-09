@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 # image-finder-app
-=======
+
 # Eulerity Hackathon Challenge
 Congratulations on making it to this stage of Eulerity's interview process! In this folder is a project for a partially built web application whose goal is to crawl a provided URL and pick out the images from it. This README will provide more information about the goals of the project, its structure, and setup and submission instructions.
 
@@ -67,4 +66,3 @@ When you are finished working on the project, before zipping up and emailing bac
 - Try to follow some good-practice principles when working on your code, such as meaningful and clean variable/method names and other good coding practices.
 - The code we have provided is to allow you to hit the ground running. You are free to use whatever web service you would like (as long as you use Java 8 and it is runnable from the command line).
 - We look forward to seeing what you can do, so good luck and have fun 😊
->>>>>>> 5f3e622 (Initial commits)
