@@ -1,1 +1,12 @@
 Please paste your list of test URLs below:
+
+1. https://editorial.rottentomatoes.com/guide/essential-animated-movies/
+2. https://www.recipetineats.com/category/soup-recipes/
+3. https://www.recipetineats.com/categories/
+4. https://en.wikipedia.org/wiki/List_of_Indian_sweets_and_desserts
+5. https://www.geeksforgeeks.org/understanding-logistic-regression/
+6. https://www.geeksforgeeks.org/deep-learning-tutorial/?ref=shm
+7. https://www.geeksforgeeks.org/what-is-reinforcement-learning/ww.geeksforgeeks.org/what-is-reinforcement-learning/
+8. https://www.recipetineats.com/category/pasta-recipes/
+9. https://www.consumerreports.org/cars/
+10. https://www.fenimorelane.com/fenimore-lane/the-best-movies-to-watch-according-to-our-favorite-people
