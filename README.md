@@ -25,6 +25,9 @@ The **Image Finder App** is a Java-based web application designed to crawl a giv
 
 ## 🛠 Installation and Setup
 
+### 🖥 Operating System
+This project was developed and tested on **Windows 11**.
+
 ### **📌 Prerequisites**
 Ensure you have the following installed:
 - ☕ Java 8 (exact version, NOT Java 9+)
@@ -143,6 +146,26 @@ mvn test
 - ⚠️ **Improved Error Handling**: More informative messages for invalid URLs.
 - 🔄 **Performance Optimization**: Reduce duplicate URL visits.
 - 🖼 **Advanced Image Recognition**: Detect and categorize images (logos, icons, etc.).
+
+---
+
+## 📷 Screenshots
+Here are some screenshots showcasing the Image Finder App in action:
+
+### 🖼 Light Mode
+![Light Mode](images/1.png)
+
+### 🌙 Dark Mode
+![Dark Mode](images/2.png)
+
+### 🎬 Movie Posters Crawled
+![Movie Posters](images/3.png)
+
+### 🍽 Food Images Crawled
+![Food Images](images/4.png)
+
+### 🍝 Pasta Recipes Crawled
+![Pasta Recipes](images/5.png)
 
 ---
 
