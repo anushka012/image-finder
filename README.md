@@ -1,68 +1,150 @@
-# image-finder-app
+# 📸 Image Finder App
 
-# Eulerity Hackathon Challenge
-Congratulations on making it to this stage of Eulerity's interview process! In this folder is a project for a partially built web application whose goal is to crawl a provided URL and pick out the images from it. This README will provide more information about the goals of the project, its structure, and setup and submission instructions.
+## 🏆 Eulerity Hackathon Challenge Submission
 
-## ImageFinder Goal
-The goal of this task is to perform a web crawl on a URL string provided by the user. From the crawl, you will need to parse out all of the images on that web page and return a JSON array of strings that represent the URLs of all images on the page. [Jsoup](https://jsoup.org/) is a great basic library for crawling and is already included as a maven dependency in this project, however you are welcome to use whatever library you would like.
+### 👩‍💻 Author: Anushka Sarath
 
-### Required Functionality
-We expect your submission to be able to achieve the following goals:
-- Build a web crawler that can find all images on the web page(s) that it crawls.
-- Crawl sub-pages to find more images.
-- Implement multi-threading so that the crawl can be performed on multiple sub-pages at a time.
-- Keep your crawl within the same domain as the input URL.
-- Avoid re-crawling any pages that have already been visited.
+## 🚀 Project Overview
+The **Image Finder App** is a Java-based web application designed to crawl a given URL, extract images, and display them in a paginated format. The app also provides an option to download all found images as a ZIP file.
 
-### Extra Functionality
-No individual point below is explicitly required, but we recommend trying to achieve some extra goals as well, such as the following:
-- Make your crawler "friendly" - try not to get banned from the site by performing too many crawls.
-- Try to detect what images might be considered logos.
-- Show off your front-end dev skills with Javascript, HTML, and/or CSS to make the site look more engaging.
-- Any other way you feel you can show off your strengths as a developer 😊
+## ✨ Features
+- 🕸 **Web Crawler**: Finds all images on the web page(s) that it crawls.
+- 🔗 **Sub-page Crawling**: Crawls sub-pages to discover more images within the same domain.
+- ⚡ **Multi-threading Support**: Enables concurrent crawling of multiple sub-pages.
+- 🌐 **Domain Restriction**: Ensures that the crawl stays within the same domain as the input URL.
+- 🔄 **Duplicate Avoidance**: Prevents re-crawling pages that have already been visited.
+- 📄 **Pagination Support**: Images are displayed in a paginated format (10 images per page).
+- 💾 **Session Storage**: Stores crawled images in the session for easy access.
+- 📥 **Download ZIP Functionality**: Allows users to download all extracted images as a ZIP file.
+- 🌙 **Dark Mode Toggle**: Users can switch between light and dark mode.
+- 🕵️‍♂️ **Recent Search History**: Saves and displays recent URLs searched by the user.
+- 🐳 **Docker Support**: Easily deploy the application using the provided Dockerfile.
+- 🧪 **Unit Testing**: Includes JUnit and Mockito-based test cases to ensure reliability.
 
-**PLEASE do not send us a submission with only a basic JSoup crawl and only a couple lines of code.** This is your chance to prove what you could contribute to our team.
+---
 
-You have one week to work on the submission from the time when you receive it. To submit you assignment, zip up your project (`imagefinder.zip`) and email it back to me. **Please include a list of URLs that you used to test in your submissions.** You should place them in the attached `test-links.txt` file found in the root of this project.
+## 🛠 Installation and Setup
 
-## Structure
-The ImageFinder servlet is found in `src/main/java/com/eulerity/hackathon/imagefinder/ImageFinder.java`. This is the only provided Java class. Feel free to add more classes or packages as you see fit. 
+### **📌 Prerequisites**
+Ensure you have the following installed:
+- ☕ Java 8 (exact version, NOT Java 9+)
+- 🛠 Maven 3.5 or higher
+- 🌐 Apache Tomcat (if running manually)
+- 🐳 Docker (optional, for containerized deployment)
 
-The main landing page for this project can be found in `src/main/webapp/index.html`. This page contains more instructions and serves as the starting page for the web application. You may edit this page as much as it suits you, and/or add other pages. 
+### **💻 Running the Project Locally**
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-repo/imagefinder.git
+   cd imagefinder
+   ```
+2. Build the project using Maven:
+   ```sh
+   mvn package
+   ```
+3. Run the project using Jetty:
+   ```sh
+   mvn clean test package jetty:run
+   ```
+4. Open the browser and go to:
+   ```
+   http://localhost:8080
+   ```
 
-Finally, in the root directory of this project, you will find the `pom.xml`. This contains the project configuration details used by maven to build the project. If you want/need to use outside dependencies, you should add them to this file.
+### **🐳 Docker Deployment**
+To build and run the project using Docker:
+1. Build the Docker image:
+   ```sh
+   docker build -t imagefinder .
+   ```
+2. Run the container:
+   ```sh
+   docker run -p 8080:8080 imagefinder
+   ```
+3. Access the application at:
+   ```
+   http://localhost:8080
+   ```
 
-## Running the Project
-Here we will detail how to setup and run this project so you may get started, as well as the requirements needed to do so.
+---
 
-### Requirements
-Before beginning, make sure you have the following installed and ready to use
-- Maven 3.5 or higher
-- Java 8
-  - Exact version, **NOT** Java 9+ - the build will fail with a newer version of Java
+## 🎯 Usage
+1. **Enter a URL** in the input field and click **Submit**.
+2. The web crawler will fetch images and display them in a paginated format.
+3. **Navigate through pages** using the ⬅️ **Previous** and ➡️ **Next** buttons.
+4. Click 📥 **Download ZIP** to save all images as a ZIP file.
+5. Use the 🌙 **Dark Mode Toggle** for a better viewing experience.
+6. The 📌 **Recent Searches Dropdown** allows easy access to previously searched URLs.
 
-### Setup
-To start, open a terminal window and navigate to wherever you unzipped to the root directory `imagefinder`. To build the project, run the command:
+---
 
->`mvn package`
+## 🏗 Project Structure
+```
+imagefinder/
+├── src/
+│   ├── main/
+│   │   ├── java/com.eulerity.hackathon.imagefinder/
+│   │   │   ├── DownloadServlet.java
+│   │   │   ├── ImageFinder.java
+│   │   │   ├── WebCrawler.java
+│   │   ├── webapp/
+│   │       ├── index.html
+│   │       ├── script.js
+│   │       ├── style.css
+│   │       ├── WEB-INF/web.xml
+│   ├── test/java/com.eulerity.hackathon.imagefinder/
+│       ├── ImageFinderTest.java
+│       ├── WebCrawlerTest.java
+├── pom.xml (Maven Configuration)
+├── Dockerfile (For Containerization)
+├── test-links.txt (Test URLs)
+└── README.md (Project Documentation)
+```
 
-If all goes well you should see some lines that end with "BUILD SUCCESS". When you build your project, maven should build it in the `target` directory. To clear this, you may run the command:
+---
 
->`mvn clean`
+## 🌐 API Endpoints
+### **1. 🔍 Image Crawling (POST)**
+```
+Endpoint: /main
+Method: POST
+Parameters:
+- url (String): The website URL to crawl.
+- page (int): Page number for pagination.
+```
+**Example Response:**
+```json
+{
+    "images": ["https://example.com/image1.jpg", "https://example.com/image2.png"],
+    "totalPages": 3,
+    "currentPage": 0
+}
+```
 
-To run the project, use the following command to start the server:
+### **2. 📥 Download Images as ZIP (GET)**
+```
+Endpoint: /download-zip
+Method: GET
+Response: ZIP file containing all images
+```
 
->`mvn clean test package jetty:run`
+---
 
-You should see a line at the bottom that says "Started Jetty Server". Now, if you enter `localhost:8080` into your browser, you should see the `index.html` welcome page! If all has gone well to this point, you're ready to begin!
+## 🧪 Testing
+Unit tests are written using **JUnit** and **Mockito**.
+To run tests:
+```sh
+mvn test
+```
 
-## Submission
-When you are finished working on the project, before zipping up and emailing back your submission, **PLEASE RUN ONE LAST `mvn clean` COMMAND TO REMOVE ANY UNNECESSARY FILES FROM YOUR SUBMISSION**. Please also make sure to add the URLs you used to test your project to the `test-links.txt` file. After doing these things, you may zip up the root directory (`imagefinder`) and email it back to us.
+---
 
-## Final Notes
-- If you feel you need more time to work, you are free to ask for it.
-- If you are having any trouble, especially with the setup, please reach out and we will try to answer as soon as we can.
-- The ideas listed above on how to expand the project are great starting points, but feel free to add in your own ideas as well.
-- Try to follow some good-practice principles when working on your code, such as meaningful and clean variable/method names and other good coding practices.
-- The code we have provided is to allow you to hit the ground running. You are free to use whatever web service you would like (as long as you use Java 8 and it is runnable from the command line).
-- We look forward to seeing what you can do, so good luck and have fun 😊
+## 🚀 Known Issues & Future Enhancements
+- ⚠️ **Improved Error Handling**: More informative messages for invalid URLs.
+- 🔄 **Performance Optimization**: Reduce duplicate URL visits.
+- 🖼 **Advanced Image Recognition**: Detect and categorize images (logos, icons, etc.).
+
+---
+
+## 📩 Contact
+For any queries, reach out at 📧 **anushkasarath01@gmail.com**.
