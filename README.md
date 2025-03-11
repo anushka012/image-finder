@@ -169,5 +169,10 @@ Here are some screenshots showcasing the Image Finder App in action:
 
 ---
 
+## 📂 GitHub Repository
+You can find the complete source code here: [Image Finder Repository](https://github.com/anushka012/image-finder)
+
+---
+
 ## 📩 Contact
 For any queries, reach out at 📧 **anushkasarath01@gmail.com**.
